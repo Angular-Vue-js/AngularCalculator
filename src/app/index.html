@@ -6,18 +6,17 @@
         </tr>
         <tr>
             <td width="20%">
-                <input type="text" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required [(ngModel)]="firstInputS" name="firstInputSum" #firstInputSum="ngModel">
+                <input type="text" pattern="^[+-]*[0-9]*[\.]?[0-9]*$"  [(ngModel)]="firstInputS" name="firstInputSum" #firstInputSum="ngModel">
             </td>
             <td width="20%" align="center">+</td>
             <td width="20%">
-                <input type="text" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required [(ngModel)]="lastInputS" name="lastInputSum" #lastInputSum="ngModel">
+                <input type="text" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" [(ngModel)]="lastInputS" name="lastInputSum" #lastInputSum="ngModel">
             </td>
             <td width="20%" align="center">
-                <button type="submit" class="btn btn-default" [disabled]="!myForm.form.valid" (click)="onSubmit(something) && myForm.form.valid=false">Submit</button>
-                {{myForm.form.valid}}
+                <button type="submit" class="btn btn-default" [disabled]="!myForm.form.valid || !firstInputS || !lastInputS"  (click)="onSubmit()">Submit</button>
             </td>
             <td width="20%">
-                <div *ngIf="something && firstInputSum && lastInputSum">{{onSubmit(something)}} {{something}}</div>
+                {{something}}
             </td>
         </tr>
         <tr>
@@ -36,17 +35,17 @@
         </tr>
         <tr>
             <td width="20%">
-                <input type="number" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required [(ngModel)]="firstInputD" name="firstInputDiff" #firstInputDiff="ngModel">
+                <input type="text" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" [(ngModel)]="firstInputD" name="firstInputDiff" #firstInputDiff="ngModel">
             </td>
             <td width="20%" align="center">-</td>
             <td width="20%">
-                <input type="number" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required [(ngModel)]="lastInputD" name="lastInputDiff" #lastInputDiff="ngModel">
+                <input type="text" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" [(ngModel)]="lastInputD" name="lastInputDiff" #lastInputDiff="ngModel">
             </td>
             <td width="20%" align="center">
-                <button type="submit" class="btn btn-default" [disabled]="!myForm2.form.valid" (click)="onSubmit2(something2) && myForm4.form.valid=false">Submit</button>
+                <button type="submit" class="btn btn-default" [disabled]="!myForm2.form.valid || !firstInputD || !lastInputD"  (click)="onSubmit2()">Submit</button>
             </td>
             <td width="20%">
-                <div *ngIf="something2 && firstInputDiff && lastInputDiff">{{onSubmit2(something)}} {{something2}}</div>
+                {{something2}}
             </td>
         </tr>
         <tr>
@@ -65,17 +64,17 @@
         </tr>
         <tr>
             <td width="20%">
-                <input type="number" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required [(ngModel)]="firstInputP" name="firstInputPro" #firstInputPro="ngModel">
+                <input type="text" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" [(ngModel)]="firstInputP" name="firstInputPro" #firstInputPro="ngModel">
             </td>
             <td width="20%" align="center">*</td>
             <td width="20%">
-                <input type="number" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required [(ngModel)]="lastInputP" name="lastInputPro" #lastInputPro="ngModel">
+                <input type="text" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" [(ngModel)]="lastInputP" name="lastInputPro" #lastInputPro="ngModel">
             </td>
             <td width="20%" align="center">
-                <button type="submit" class="btn btn-default" [disabled]="!myForm3.form.valid" (click)="onSubmit3() && myForm3.form.valid=false">Submit</button>
+                <button type="submit" class="btn btn-default" [disabled]="!myForm3.form.valid || !firstInputP || !lastInputP"  (click)="onSubmit3()">Submit</button>
             </td>
             <td width="20%">
-                <div *ngIf="something3 && firstInputPro && lastInputPro">{{onSubmit3()}} {{something3}}</div>
+                {{something3}}
             </td>
         </tr>
         <tr>
@@ -94,17 +93,17 @@
         </tr>
         <tr>
             <td width="20%">
-                <input type="number" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required [(ngModel)]="firstInputQ" name="firstInputQt" #firstInputQt="ngModel">
+                <input type="text" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" [(ngModel)]="firstInputQ" name="firstInputQt" #firstInputQt="ngModel">
             </td>
             <td width="20%" align="center"> &#92;</td>
             <td width="20%">
-                <input type="number" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required [(ngModel)]="lastInputQ" name="lastInputQt" #lastInputQt="ngModel">
+                <input type="text" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" [(ngModel)]="lastInputQ" name="lastInputQt" #lastInputQt="ngModel">
             </td>
             <td width="20%" align="center">
-                <button type="submit" class="btn btn-default" [disabled]="!myForm4.form.valid" (click)="onSubmit4() && myForm4.form.valid=false">Submit</button>
+                <button type="submit" class="btn btn-default" [disabled]="!myForm4.form.valid || !firstInputQ || !lastInputQ"  (click)="onSubmit4()">Submit</button>
             </td>
             <td width="20%">
-                <div *ngIf="something4 && firstInputQt && lastInputQt">{{onSubmit4()}} {{something4}}</div>
+                {{something4}}
             </td>
         </tr>
         <tr>
